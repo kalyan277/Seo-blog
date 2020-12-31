@@ -1,5 +1,6 @@
-const sslRedirect = require('heroku-ssl-redirect')
 const express = require("express");
+var http = require('http');
+var enforce = require('express-sslify');
 const next = require("next");
 const routes = require("../routes");
 const dev = process.env.NODE_ENV !== "production";
@@ -33,8 +34,10 @@ app.prepare().then(() => {
     //app.use(morgan('dev'))
     server.use(bodyParser.json())
     server.use(cookieParser())
-    // enable ssl redirect
-    app.use(sslRedirect());
+
+    // Use enforce.HTTPS({ trustProtoHeader: true }) since you're behind Heroku's reverse proxy
+    server.use(enforce.HTTPS({ trustProtoHeader: true }));
+
 
     //routes
     server.use('/api',blogRoutes);
