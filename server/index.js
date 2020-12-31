@@ -1,6 +1,4 @@
 const express = require("express");
-var http = require('http');
-var enforce = require('express-sslify');
 const next = require("next");
 const routes = require("../routes");
 const dev = process.env.NODE_ENV !== "production";
@@ -35,8 +33,7 @@ app.prepare().then(() => {
     server.use(bodyParser.json())
     server.use(cookieParser())
 
-    // Use enforce.HTTPS({ trustProtoHeader: true }) since you're behind Heroku's reverse proxy
-    server.use(enforce.HTTPS({ trustProtoHeader: true }));
+
 
 
     //routes
