@@ -264,7 +264,7 @@ const ProfileUpdate = () => {
           <div className="col-md-4">
             {imgSrc && (
               <img
-                src={`${API}/api/user/photo/${imgSrc}`}
+                src={`${API}api/user/photo/${imgSrc}`}
                 alt="user profile"
                 className="img img-thumbnail img-fluid mb-3"
                 style={{ maxHeight: 'auto', maxWidth: '100%' }}

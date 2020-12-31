@@ -25,11 +25,11 @@ export const handleResponse=response=>{
 
 
 
-export const signup = async(user)=>{
+export const signup = async({token})=>{
      const url = "api/signup";
   return  await axiosInstance
 
-    .post(url, user)
+    .post(url, {token:token})
     .then((response) => response.data)
     .catch(error=> error.response.data);
    
@@ -141,3 +141,32 @@ export const updateUser = async(user,next)=>{
      }
    }
  }
+
+ export const forgotPassword = async(email)=>{
+     const url = "api/forgot-password";
+  return  await axiosInstance
+    .put(url,email)
+    .then((response) => response.data)
+    .catch(error=> error.response.data);
+   
+}
+
+ export const resetPassword = async(resetInfo)=>{
+     const url = "api/reset-password";
+  return  await axiosInstance
+    .put(url,resetInfo)
+    .then((response) => response.data)
+    .catch(error=> error.response.data);
+   
+}
+
+ export const preSignup = async(user)=>{
+     const url = "api/pre-signup";
+  return  await axiosInstance
+    .post(url,user)
+    .then((response) => response.data)
+    .catch(error=> error.response.data);
+   
+}
+
+

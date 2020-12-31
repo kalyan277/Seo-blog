@@ -6,7 +6,6 @@ export default function Layout(props) {
         <React.Fragment>
           <Header isAuth={props.isAuth}/>
            {props.children}
-           <p>footer</p>
         </React.Fragment>
     )
 }

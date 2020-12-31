@@ -18,6 +18,6 @@ export const emailContactForm = async(data)=>{
      return  await axiosInstance
     .post(emailEndpoint, data,)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
+    .catch(error=> console.log(error));
    
 }

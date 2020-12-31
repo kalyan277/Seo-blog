@@ -56,7 +56,7 @@ const UserProfile = ({ user, blogs, query,isAuth }) => {
                                         </div>
                                         <div className="col-md-4">
                                             <img
-                                                src={`${process.env.API}/api/user/photo/${user.username}`}
+                                                src={`${process.env.API}api/user/photo/${user.username}`}
                                                 className="img img-fluid img-thumbnail mb-3"
                                                 style={{ maxHeight: '100px', maxWidth: '100%' }}
                                                 alt="user profile"

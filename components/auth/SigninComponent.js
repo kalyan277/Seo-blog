@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {signin,authenticate,isAuth} from '../../actions/auth'
 import {Field,reduxForm} from 'redux-form';
+import Link from "next/link";
 
 import Router from 'next/router';
 function SigninComponent(props) {
@@ -65,6 +66,13 @@ function SigninComponent(props) {
             {showLoading()}
             {showMessage()}
             {signinForm()}
+            <br/>
+            <div className ="text-center">
+                <Link href ='/auth/password/forgot'>
+                    <a className="btn btn-outline-danger btn-sm">Reset Password</a>
+                </Link>
+            </div>
+          
         </React.Fragment>
         
     )

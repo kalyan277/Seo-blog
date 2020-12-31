@@ -11,7 +11,7 @@ const Tag = props => {
     return (
       <Head>
         <title>
-          {tag.name} | {APP_NAME}
+          {tag.name} | {process.env.APP_NAME}
         </title>
         <meta
           name="description"

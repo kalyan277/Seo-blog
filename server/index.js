@@ -1,3 +1,4 @@
+const sslRedirect = require('heroku-ssl-redirect')
 const express = require("express");
 const next = require("next");
 const routes = require("../routes");
@@ -32,9 +33,8 @@ app.prepare().then(() => {
     //app.use(morgan('dev'))
     server.use(bodyParser.json())
     server.use(cookieParser())
-
-
-
+    // enable ssl redirect
+    app.use(sslRedirect());
 
     //routes
     server.use('/api',blogRoutes);

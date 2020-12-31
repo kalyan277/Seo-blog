@@ -103,7 +103,7 @@ const SingleBlog = props => {
               <section>
                 <div className="row" style={{ marginTop: '-30px' }}>
                   <img
-                    src={`${process.env.API}/api/blog/photo/${blog.slug}`}
+                    src={`${process.env.API}api/blog/photo/${blog.slug}`}
                     alt={blog.title}
                     className="img img-fluid featured-image"
                   />

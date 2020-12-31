@@ -3,4 +3,6 @@ const routes = require("next-routes");
 // Name   Page      Pattern
 module.exports = routes() // ----   ----      -----
 
-  .add("portfolio", "/portfolio/:id")
+  .add("auth/password/resetPassword", "/auth/password/reset/:slug")
+  .add("auth/account/activateAccount", "/auth/account/activate/:slug")
+  

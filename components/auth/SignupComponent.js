@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import {signup,isAuth} from '../../actions/auth'
+import {isAuth, preSignup} from '../../actions/auth'
 import Router from "next/router";
 
 export default function SignupComponent(props) {
@@ -19,7 +19,7 @@ export default function SignupComponent(props) {
         setValues({...values,loading:true,error:false})
         const user={name,email,password}
         try {
-            const response =await signup(user);
+            const response =await preSignup(user);
            // console.log(response);
             if(response.error){
                 setValues({...values,error:response.error,loading:false})
