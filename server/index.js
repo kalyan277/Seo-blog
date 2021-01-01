@@ -16,15 +16,12 @@ const categoryRoutes = require('./routes/category')
 const tagRoutes = require('./routes/tag')
 const formRoutes = require('./routes/form')
 const compression =require('compression');
-var http = require('http');
-var enforce = require('express-sslify');
+
 
 
 //db
 mongoose.connect(process.env.DATABASE,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:false,useUnifiedTopology:true})
 .then(()=>console.log("DB Connected"));
-
-
 
 app.prepare().then(() => {
   const server = express();
@@ -35,7 +32,7 @@ app.prepare().then(() => {
     //app.use(morgan('dev'))
     server.use(bodyParser.json())
     server.use(cookieParser())
-    server.use(enforce.HTTPS());
+   
 
 
 
