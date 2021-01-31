@@ -2,7 +2,7 @@ INTRODUCTION
 ------------
 Seo Blog is a Monolithic Functional Based Application,build with the help of Javascript(Next js).
 
-It Comprises of a multiuser Login ,where a user can get register and create account and update basic information.They can upload blog view update delete their blog.they can comment on others blog
+It Comprises of A Multiuser Login System ,where a user can get register and update basic information(profile).They can upload view update delete their blog.They can also comment and view others blog.Admin User is responsible to add new Tags and Categories and deleted user from the system.  
 
 Disqus commenting system Is Implemented to keep track of Comments.
 
