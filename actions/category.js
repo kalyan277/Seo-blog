@@ -25,7 +25,7 @@ export const create = async(category)=>{
   return  await axiosInstance
     .post(url, category,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
+    .catch(error=> console.log(error));
    
 }
 

@@ -289,7 +289,7 @@ const BlogUpdate = props => {
           </div>
           {body && (
             <img
-              src={`${API}/api/blog/photo/${router.query.slug}`}
+              src={`${API}api/blog/photo/${router.query.slug}`}
               style={{ width: '100%' }}
               alt="title"
             />

@@ -23,7 +23,7 @@ form.parse(req,(err,fields,files)=>{
     const {title,body,categories,tags}=fields
     if(!title || !title.length){
         return res.status(400).json({
-            error:'tittle is require'
+            error:'Title is require'
         })
     }
     if(!body || body.length<200){
@@ -181,6 +181,46 @@ exports.listAllBlogsCategoriesTags =(req,res)=>{
     })
     })
 }
+
+
+
+exports.listBlog = async(req,res)=>{
+      try {
+        const {sort,order,page} =req.body;
+        const currentPage = page || 1
+        const perPage = 3
+        const blogs = await Blog.find({})
+        .sort([[sort,order]])
+        .skip((currentPage-1) * perPage)
+        .select('title mdesc slug')
+        .limit((perPage))
+        .exec();
+        res.json(blogs);
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
+
+    
+    exports.blogsCount = async(req,res)=>{
+      try {
+        let total = await Blog.find({})
+        .estimatedDocumentCount()
+        .exec();
+        res.json(total);
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
+
+
+  
+
+
+
+
 
 
 

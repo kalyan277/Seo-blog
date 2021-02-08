@@ -4,3 +4,14 @@
 body {
   overflow-x: hidden;
 }
+
+.paginali > ul {
+  list-style-type: none;
+}
+
+.ant-card-actions > li {
+  list-style-type: none;
+}
+.blognopost {
+  margin-left: 35%;
+}

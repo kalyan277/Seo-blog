@@ -1,6 +1,6 @@
 import axios from 'axios';
 import cookie from 'js-cookie'
-import { Router } from 'next/router';
+import Router from 'next/router';
 //console.log(process.env.API);
 const axiosInstance = axios.create({
   baseURL: `${process.env.API}`,
@@ -126,8 +126,8 @@ next()
 const url = "api/signout";
 return  await axiosInstance
     .get(url)
-    .then((response) => console.log('Signout Success'))
-    .catch(error=> error.response.data);
+    .then((response) => {Router.reload()})
+    .catch(error=> console.log(error));
   
 }
 

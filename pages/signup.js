@@ -1,9 +1,15 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import Layout from '../components/Layout'
-import Link from 'next/link'
+import Router from 'next/router';
 import SignupComponent from '../components/auth/SignupComponent'
 
-export default function signup() {
+export default function signup({isAuth}) {
+       useEffect(() => {
+        if(isAuth != ""){
+           Router.push("/"); 
+        }
+      
+    }, [])
     return (
         <Layout>
          <h2 className="text-center pt-4 pb-4">Signup Page</h2> 

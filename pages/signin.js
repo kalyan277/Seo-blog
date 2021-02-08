@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import {withRouter} from 'next/router'
 import SigninComponent from '../components/auth/SigninComponent'
-
-const signin=({router,updateLoginState})=> {
+import Router from 'next/router';
+const signin=({router,updateLoginState,isAuth})=> {
+    useEffect(() => {
+        if(isAuth != ""){
+           Router.push("/"); 
+        }
+      
+    }, [])
     const showRedirectMessage =()=>{
         if(router.query.message){
         return <div className="alert alert-danger">{router.query.message}</div> 

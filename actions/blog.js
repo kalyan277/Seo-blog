@@ -33,7 +33,7 @@ export const createBlog = async(category)=>{
   return  await axiosInstance
     .post(url, category,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
+    .catch(error=>error.response);
    
 }
 
@@ -150,3 +150,19 @@ export const listSearch = async(params)=>{
     .catch(error=> error.response.data);
    
 }
+
+ export const getBlogsdata =async(sort,order,page)=>{
+    return await axios.post('api/blogsdata',
+        {
+        sort,
+        order,
+        page
+       }
+   );
+};
+
+
+
+export const getBlogsTotalCount =async()=>{
+    return await axios.get(`api/blogs/totalCount`);
+};

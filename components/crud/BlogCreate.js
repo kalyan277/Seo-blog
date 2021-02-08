@@ -124,16 +124,18 @@ const BlogCreate = props => {
   //handle form submission
   const publishBlog = e => {
     e.preventDefault();
-     console.log(formData.get('title'));
+     
     dispatch({ type: 'loading' });
     createBlog(formData).then(res => {
-      if (res.error) {
-        dispatch({ type: 'error', payload: res.error });
-      } else {
+      if (res.title != undefined) {
         dispatch({ type: 'success', payload: res });  
         document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );  
       }
-    
+      else if (res.data.error != undefined) {
+         dispatch({ type: 'error', payload: res.data.error  });
+      
+      }
+
     });
   };
 
@@ -146,7 +148,7 @@ const BlogCreate = props => {
       dispatch({ type: name, payload: value });
     }
   };
-  console.log(checkedCat)
+  //console.log(checkedCat)
   const handleBody = e => {
     // console.log(event);
     formData.set('body', e);

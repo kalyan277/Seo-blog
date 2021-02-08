@@ -7,11 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 import {signout,isAuth} from '../actions/auth'
@@ -91,7 +86,7 @@ const toggle = () => setIsOpen(!isOpen);
              <NavLink href="/user/crud/create" style={{cursor:"pointer"}}className="btn btn-primary text-light" >Write A Blogs</NavLink>      
             </NavItem>
             <NavItem>
-                  <NavLink style={{cursor:"pointer"}} onClick={()=> signout(()=> Router.replace(`/signin`))}>Signout</NavLink>
+                  <NavLink style={{cursor:"pointer"}} onClick={()=> signout(()=> console.log("Logging Out"))}>Signout</NavLink>
             </NavItem>
             </React.Fragment>
             )}

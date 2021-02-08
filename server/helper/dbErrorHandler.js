@@ -16,7 +16,7 @@ exports.errorHandler =error=>{
        // console.log(error.code)
         switch (error.code) {
             case 11000:
-                message='Category Aleredy Exist';
+                message='Category Already Exist';
                 break;
              case 11001:
                  message=uniqueMessage(error)   
