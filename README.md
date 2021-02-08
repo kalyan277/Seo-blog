@@ -16,7 +16,7 @@ CSS And Bootstrap is used for styling.
 
 DEPLOYED LINK
 ------------
-Soon It Will Be Available
+https://seo-blog-kalyan.herokuapp.com/
 
 REQUIREMENTS
 ------------
