@@ -35,7 +35,7 @@ export default function index(props) {
                         </ul>
                     </div>
                     <div className="col-md-8">
-                        right
+                       
                     </div>
                  </div>
              </div>
