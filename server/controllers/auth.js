@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 const _ = require('lodash');
 
 const mailTransporter = nodemailer.createTransport({ 
-    service: 'gmail', 
+    service: 'Gmail', 
     auth: { 
         user: process.env.EMAIL_USER, 
         pass: process.env.EMAIL_PASS
@@ -35,11 +35,11 @@ User.findOne({email:email.toLowerCase()}).exec((err,user)=>{
     <p>This Email May Contain Sensetive Information</p>
     <p>https://seo-blog-kalyan.herokuapp.com/</p>`
 };
-console.log("Token"+token)
-console.log("Name"+name)
-console.log("password"+password)
-console.log("EMAIL_USER"+process.env.EMAIL_USER)
-console.log("EMAIL_PASS"+process.env.EMAIL_PASS)
+// console.log("Token"+token)
+// console.log("Name"+name)
+// console.log("password"+password)
+// console.log("EMAIL_USER"+process.env.EMAIL_USER)
+// console.log("EMAIL_PASS"+process.env.EMAIL_PASS)
 
  mailTransporter.sendMail(mailDetails, function(err, data) { 
         if(err) { 
