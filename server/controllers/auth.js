@@ -33,12 +33,12 @@ User.findOne({email:email.toLowerCase()}).exec((err,user)=>{
     <p> Url :${process.env.API}auth/account/activate/${token}</p>
     <hr/>
     <p>This Email May Contain Sensetive Information</p>
-    <p>https://SeoBlog.com</p>`
+    <p>https://seo-blog-kalyan.herokuapp.com/</p>`
 };
 
  mailTransporter.sendMail(mailDetails, function(err, data) { 
         if(err) { 
-            console.log('Error Occurs'); 
+            console.log(err); 
         } else { 
         console.log('Email sent successfully');
         return res.json({
