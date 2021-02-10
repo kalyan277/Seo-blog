@@ -4,7 +4,7 @@ import Router from 'next/router';
 //console.log(process.env.API);
 const axiosInstance = axios.create({
   baseURL: `${process.env.API}`,
-  timeout:20000
+  timeout:10000
 });
 
 export const handleResponse=response=>{
