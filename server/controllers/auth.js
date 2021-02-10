@@ -7,7 +7,7 @@ const { errorHandler } = require('../helper/dbErrorHandler');
 const nodemailer = require('nodemailer');
 const _ = require('lodash');
 
-const mailTransporter = nodemailer.createTransport("SMTP",
+const mailTransporter = nodemailer.createTransport(
 {
     service: 'gmail',
     auth: {
@@ -15,7 +15,7 @@ const mailTransporter = nodemailer.createTransport("SMTP",
         pass: process.env.EMAIL_PASS
     },
   
-    
+
 });
 
 exports.preSignup = (req, res) => {

@@ -68,7 +68,7 @@ const toggle = () => setIsOpen(!isOpen);
 
                 {props.isAuth && props.isAuth.role === 1 && (
                 <NavItem>
-                  <Link href="/user">
+                  <Link href="/admin">
              <NavLink style={{cursor:"pointer"}} >{`${props.isAuth.name}'s Dashboard`}</NavLink>
                   </Link>
                   
