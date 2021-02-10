@@ -5,14 +5,22 @@ const expressJwt = require('express-jwt');
 const blog = require('../models/blog');
 const { errorHandler } = require('../helper/dbErrorHandler');
 const nodemailer = require('nodemailer');
+const {google} =require('googleapis')
 const _ = require('lodash');
 
+const oAuth2Client = new google.auth.OAuth2(process.env.CLIENT_ID,process.env.CLIENT_SECRET,process.env.REDIRECT_URL);
+oAuth2Client.setCredentials({refresh_token:process.env.REFRESH_TOKEN})
+const accessToken = oAuth2Client.getAccessToken()
 const mailTransporter = nodemailer.createTransport(
 {
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        type:"OAuth2",
+        user:process.env.EMAIL_USER,
+        clientId:process.env.CLIENT_ID,
+        clientSecret:process.env.CLIENT_SECRET,
+        refreshToken:process.env.REFRESH_TOKEN,
+        accessToken:accessToken
     },
   
 
