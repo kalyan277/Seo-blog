@@ -4,7 +4,7 @@ import queryString from 'querystring'
 import { isAuth } from './auth';
 const axiosInstance = axios.create({
   baseURL: `${process.env.API}`,
-  timeout:9000
+  timeout:1600
 });
 
 

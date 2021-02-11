@@ -52,6 +52,8 @@ const ActivateAccount = props => {
      const token=id[4];
      
     if (token) {
+     // console.log(token);
+       //console.log(jwt.decode(token));
       const { name } = jwt.decode(token);
       dispatch({ type: 'token', payload: { token, name } });
     }

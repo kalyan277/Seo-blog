@@ -35,7 +35,7 @@ let mailDetails = {
     <p>Sender Message :${message}</p>
     <hr/>
     <p>This Email May Contain Sensetive Information</p>
-    <p>https://SeoBlog.com</p>`
+     <p>https://seo-blog-kalyan.herokuapp.com/</p>`
 }; 
   try {
     mailTransporter.sendMail(mailDetails, function(err, data) { 
@@ -69,7 +69,7 @@ let mailDetails = {
     <p>Message :${message}</p>
     <hr/>
     <p>This Email May Contain Sensetive Information</p>
-    <p>https://SeoBlog.com</p>`
+     <p>https://seo-blog-kalyan.herokuapp.com/</p>`
 }; 
   try {
     mailTransporter.sendMail(mailDetails, function(err, data) { 
