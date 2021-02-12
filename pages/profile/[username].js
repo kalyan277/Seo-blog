@@ -103,11 +103,11 @@ const UserProfile = ({ user, blogs, query,isAuth }) => {
     );
 };
 
-UserProfile.getInitialProps = ({ query }) => {
-    // console.log(query);
+UserProfile.getInitialProps = ({query}) => {
+   
     return userPublicProfile(query.username).then(data => {
         if (data.error) {
-            console.log(data.error);
+           // console.log(data.error);
         } else {
             // console.log(data);
             return { user: data.user, blogs: data.blogs, query };

@@ -10,7 +10,7 @@ const BlogCard =({blog})=>{
     <React.Fragment>
     <Card 
     cover ={
-        <img src ={`${process.env.API}api/blog/photo/${title}`} 
+        <img src ={`${process.env.API}api/blog/photo/${slug}`} 
         style={{height:"150px",ObjectFit:"cover",width: "100%" }}
         className="p-1" />
     }

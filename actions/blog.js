@@ -4,7 +4,7 @@ import queryString from 'querystring'
 import { isAuth } from './auth';
 const axiosInstance = axios.create({
   baseURL: `${process.env.API}`,
-  timeout:1600
+  timeout:12000
 });
 
 
@@ -102,7 +102,7 @@ export const list = async(username)=>{
  if(username){
    url = `api/${username}/blogs`;
  }else{
-  url = "api/blog";
+  url = "api/blogs";
  }
   return  await axiosInstance
     .get(url)
