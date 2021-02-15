@@ -7,6 +7,7 @@ import thunk from 'redux-thunk'
 import {isAuth} from '../actions/auth'
 import '.././node_modules/nprogress/nprogress.css'
 import'../static/styles.css'
+import "antd/dist/antd.css";
 
 
   // global.window = {document: {createElementNS: () => {return {}} }};window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||

@@ -4,7 +4,7 @@ import Private from '../../components/auth/Private'
 import Layout from '../../components/Layout'
 export default function index(props) {
     return (
-        <Layout isAuth ={props.isAuth}>
+        <Layout isAuth ={props.isAuth} pages={'dashboard'}>
             <Private>
                       <div className="container-fluid">
                  <div className='row'>

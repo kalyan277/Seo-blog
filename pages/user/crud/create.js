@@ -4,7 +4,7 @@ import BlogCreate from '../../../components/crud/BlogCreate';
 
 const CreateBlog = (props) => {
   return (
-    <Layout isAuth ={props.isAuth}>
+    <Layout isAuth ={props.isAuth} pages={'create'}>
       <Private>
         <div className="container-fluid">
           <div className="row">

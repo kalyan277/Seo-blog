@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 export default function index(props) {
    
     return (
-         <Layout isAuth ={props.isAuth}>
+         <Layout isAuth ={props.isAuth} pages={"dashboard"}>
              <Admin>
              <div className="container-fluid">
                  <div className='row'>

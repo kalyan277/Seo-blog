@@ -3,7 +3,7 @@ import ContactForm from '../components/form/ContactForm';
 
 const Contact = ({isAuth}) => {
   return (
-    <Layout isAuth ={isAuth}>
+    <Layout isAuth ={isAuth} pages={'contact'}>
       <div className="container">
         <div className="row">
           <div className="col-md-8 offset-md-2">

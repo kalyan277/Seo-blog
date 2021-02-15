@@ -22,7 +22,6 @@ Router.onRouteChangeError = url =>nProgress.done()
 const Header = (props) => {
 const [isOpen, setIsOpen] = useState(false);
 const toggle = () => setIsOpen(!isOpen);
-//console.log(props.isAuth.role)
   return (
     <div>
       <Navbar color="light" light expand="md">
@@ -32,22 +31,22 @@ const toggle = () => setIsOpen(!isOpen);
           <Nav className="ml-auto" navbar>
           {!(props.isAuth) && (
             <React.Fragment>
-             <NavItem>
+             <NavItem className={props.pages==="blogs"?"active":""}>
                   <Link href="/blogs">
              <NavLink style={{cursor:"pointer"}} >Blogs</NavLink>
                   </Link>
             </NavItem>
-               <NavItem>
+               <NavItem className={props.pages==="contact"?"active":""}>
                   <Link href="/contact">
              <NavLink style={{cursor:"pointer"}} >Contact</NavLink>
                   </Link>
             </NavItem>
-           <NavItem>
-              <Link href="/signin">
+           <NavItem className={props.pages==="signin"?"active":""}>
+              <Link href="/signin" >
                   <NavLink style={{cursor:"pointer"}}>Signin</NavLink>
               </Link>
             </NavItem>
-             <NavItem>
+             <NavItem className={props.pages==="signup"?"active":""}>
               <Link href="/signup">
                   <NavLink style={{cursor:"pointer"}} >Signup</NavLink>
               </Link>
@@ -58,7 +57,7 @@ const toggle = () => setIsOpen(!isOpen);
           )}
 
              {props.isAuth && props.isAuth.role === 0 && (
-                <NavItem>
+                <NavItem className={props.pages==="dashboard"?"active":""}>
                   <Link href="/user">
              <NavLink style={{cursor:"pointer"}} >{`${props.isAuth.name}'s Dashboard`}</NavLink>
                   </Link>
@@ -67,7 +66,7 @@ const toggle = () => setIsOpen(!isOpen);
             )}
 
                 {props.isAuth && props.isAuth.role === 1 && (
-                <NavItem>
+                <NavItem className={props.pages==="dashboard"?"active":""}>
                   <Link href="/admin">
              <NavLink style={{cursor:"pointer"}} >{`${props.isAuth.name}'s Dashboard`}</NavLink>
                   </Link>
@@ -77,12 +76,12 @@ const toggle = () => setIsOpen(!isOpen);
 
             {props.isAuth && (
               <React.Fragment>
-              <NavItem>
+              <NavItem className={props.pages==="blogs"?"active":""}>
                   <Link href="/blogs">
              <NavLink style={{cursor:"pointer"}} >Blogs</NavLink>
                   </Link>
             </NavItem>
-            <NavItem>
+            <NavItem className={props.pages==="create"?"active":""}>
              <NavLink href="/user/crud/create" style={{cursor:"pointer"}}className="btn btn-primary text-light" >Write A Blogs</NavLink>      
             </NavItem>
             <NavItem>

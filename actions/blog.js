@@ -36,7 +36,8 @@ export const createBlog = async(category)=>{
      
   return  await axiosInstanceBlog
     .post(url, category,setAuthHeader())
-    .then((response) => response.data);
+    .then((response) => response.data)
+     .catch(error=> error.response);
    
 }
 
@@ -130,7 +131,8 @@ if(isAuth() && isAuth().role ===1){
  }
   return  await axiosInstanceBlog
     .put(url,blog,setAuthHeader())
-    .then((response) => response.data);
+    .then((response) => response.data)
+     .catch(error=> error.response.data);;
    
 }
 

@@ -7,7 +7,7 @@ const Blogs = (props) => {
   const username = isAuth() && isAuth().username;
 
   return (
-    <Layout isAuth ={props.isAuth}>
+    <Layout isAuth ={props.isAuth} pages={'blog'}>
       <Private>
         <div className="container">
           <div className="row">

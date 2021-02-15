@@ -120,7 +120,7 @@ const Blogs = props => {
   return (
     <React.Fragment>
       {head()}
-      <Layout isAuth ={props.isAuth}>
+      <Layout isAuth ={props.isAuth} pages={'blogs'}>
         <main>
           <div className="container-fluid">
             <header>

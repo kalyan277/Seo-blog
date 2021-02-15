@@ -187,7 +187,7 @@ exports.listBlog = async(req,res)=>{
       try {
         const {sort,order,page} =req.body;
         const currentPage = page || 1
-        const perPage = 3
+        const perPage = 6
         const blogs = await Blog.find({})
         .sort([[sort,order]])
         .skip((currentPage-1) * perPage)
@@ -216,12 +216,6 @@ exports.listBlog = async(req,res)=>{
 
 
   
-
-
-
-
-
-
 
 exports.update =(req,res)=>{
   const slug =req.params.slug.toLowerCase()

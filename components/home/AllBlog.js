@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
 import BlogCard from '../cards/BlogCard';
-//import { getProducts } from '../functions/product';
-import {Pagination,Spin} from 'antd'
+import {Pagination} from 'antd'
 import { getBlogsdata, getBlogsTotalCount } from '../../actions/blog';
+import LoadingCard from '../cards/LoadingCard';
 const AllBlog = ()=> {
     const [produts,setProducts]=useState([]);
     const [loading,setLoading] =useState(false);
@@ -32,7 +32,7 @@ const AllBlog = ()=> {
         <React.Fragment>
  
                 <div className="container">
-                    {loading ? (<Spin/>) :(
+                     {loading ? (<LoadingCard count={6}/>) :(
                     <div className="row">
                           {produts.map((p)=>{
                        return (
@@ -48,9 +48,9 @@ const AllBlog = ()=> {
                     )}
                 </div>  
                 <div className="row">
-                    <nav className="col-md-4 offset-md-5 text-center pt-5 p-3 paginali">
+                    <nav className="col-md-4 offset-md-4 text-center pt-5 p-3">
                       <Pagination current={page}
-                        total={(productsCount / 3) * 10}
+                        total={(productsCount / 6) * 10}
                         onChange={(value) => setPage(value)}/> 
                     </nav>
                 </div>

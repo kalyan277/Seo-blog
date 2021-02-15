@@ -16,7 +16,7 @@ function SigninComponent(props) {
         setValues({loading:true,error:false})
         try {
             const response =await signin(formValues);
-           // console.log(response);
+            console.log(response);
             if(response.error){
                 setValues({error:response.error,loading:false})
             }else{

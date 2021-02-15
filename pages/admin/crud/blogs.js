@@ -8,7 +8,7 @@ import Layout from '../../../components/Layout'
 export default function Blogs(props) {
    
     return (
-         <Layout isAuth ={props.isAuth}>
+         <Layout isAuth ={props.isAuth} pages={'blogs'}>
              <Admin>
              <div className="container-fluid">
                  <div className='row'>
