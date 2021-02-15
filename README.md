@@ -14,6 +14,25 @@ MongoDb Atlas is used for database.The default backend server is overriden with 
 
 CSS And Bootstrap is used for styling.
 
+
+The Thing To Look For
+------------
+Email Is Send With The Help Of Node Mailer.I Have Used oauth 2.0 for authentication with oauthplayground.
+
+Disqus Commenting System Which Give A Interactive Interface For Commenting.
+
+Redux Form Validation Is Used For Client Side Validation.
+
+Used The Redux Hook In Most Efficient Manner.
+
+Gave Stress In Code Reusability and redability.
+
+Tried To Keep The UI As Simple As Possible.
+
+Deal With The Functional Components.Tried to follow the industrial Standard.
+
+For Make Communication From Client And Server Possible.I Have Used Next JS.It Is Fast.Give Many Feature Out From THe Box.
+
 DEPLOYED LINK
 ------------
 https://seo-blog-kalyan.herokuapp.com/
