@@ -32,8 +32,7 @@ export const createBlog = async(category)=>{
      
   return  await axiosInstance
     .post(url, category,setAuthHeader())
-    .then((response) => response.data)
-    .catch(error=>error.response);
+    .then((response) => response.data);
    
 }
 
@@ -41,7 +40,7 @@ export const getCategory = async()=>{
      const url = "api/categories";
   return  await axiosInstance
     .get(url)
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 
@@ -49,7 +48,7 @@ export const singleCategory = async(slug)=>{
      const url = `api/category/${slug}`;
   return  await axiosInstance
     .get(url)
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 
@@ -57,6 +56,7 @@ export const removeCategory = async(slug)=>{
      const url = `api/category/${slug}`;
   return  await axiosInstance
     .delete(url,setAuthHeader())
+    .then((response) => response.data);
    
 }
 
@@ -65,7 +65,7 @@ export const listBlogsWithCategoriesAndTags = async()=>{
      const url = "api/blogs-categories-tags";
   return  await axiosInstance
     .post(url,setAuthHeader())
- 
+    .then((response) => response.data);
    
 }
 
@@ -74,6 +74,7 @@ export const singleBlog = async(slug)=>{
      const url = `api/blog/${slug}`;
   return  await axiosInstance
     .get(url)
+    .then((response) => response.data);
    
 }
 
@@ -83,6 +84,7 @@ export const listRelated = async(blog)=>{
      const url = `api/blogs/related`;
   return  await axiosInstance
     .post(url,blog)
+    .then((response) => response.data);
    
 }
 
@@ -97,7 +99,7 @@ export const list = async(username)=>{
  }
   return  await axiosInstance
     .get(url)
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 
@@ -111,7 +113,7 @@ export const removeBlog = async(slug)=>{
      
   return  await axiosInstance
     .delete(url,setAuthHeader())
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 
@@ -124,7 +126,7 @@ if(isAuth() && isAuth().role ===1){
  }
   return  await axiosInstance
     .put(url,blog,setAuthHeader())
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 
@@ -134,7 +136,7 @@ export const listSearch = async(params)=>{
      const url = `api/blogs/search?${query}`;
   return  await axiosInstance
     .get(url,setAuthHeader())
-    .then((response) => response.data)
+    .then((response) => response.data);
    
 }
 

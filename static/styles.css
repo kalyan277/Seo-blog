@@ -15,3 +15,6 @@ body {
 .blognopost {
   margin-left: 39%;
 }
+.ant-card {
+  cursor: pointer;
+}
