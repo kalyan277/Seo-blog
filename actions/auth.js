@@ -28,10 +28,9 @@ export const handleResponse=response=>{
 export const signup = async({token})=>{
      const url = "api/signup";
   return  await axiosInstance
-
     .post(url, {token:token})
     .then((response) => response.data)
-    .catch(error=> error.response.data);
+   
    
 }
 
@@ -41,7 +40,6 @@ export const signin = async(user)=>{
   return  await axiosInstance
     .post(url, user)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -147,7 +145,6 @@ export const updateUser = async(user,next)=>{
   return  await axiosInstance
     .put(url,email)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -156,7 +153,6 @@ export const updateUser = async(user,next)=>{
   return  await axiosInstance
     .put(url,resetInfo)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -165,7 +161,6 @@ export const updateUser = async(user,next)=>{
   return  await axiosInstance
     .post(url,user)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 

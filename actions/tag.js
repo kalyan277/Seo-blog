@@ -26,7 +26,6 @@ export const create = async(tag)=>{
   return  await axiosInstance
     .post(url, tag,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -35,7 +34,6 @@ export const getTag = async()=>{
   return  await axiosInstance
     .get(url)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -44,7 +42,6 @@ export const singleTag = async(slug)=>{
   return  await axiosInstance
     .get(url)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -53,6 +50,5 @@ export const removeTag = async(slug)=>{
   return  await axiosInstance
     .delete(url,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }

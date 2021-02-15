@@ -26,7 +26,6 @@ export const userPublicProfile = async(username)=>{
      return  await axiosInstance
     .get(url)
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -37,7 +36,6 @@ export const getProfile = async()=>{
      return  await axiosInstance
     .get(url,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
@@ -47,7 +45,6 @@ export const update = async(user)=>{
      return  await axiosInstance
     .put(url,user,setAuthHeader())
     .then((response) => response.data)
-    .catch(error=> error.response.data);
    
 }
 
