@@ -36,7 +36,7 @@ const AllBlog = ()=> {
                     <div className="row">
                           {produts.map((p)=>{
                        return (
-                           <div className="col-md-4 text-center" key={p._id} >
+                           <div className="col-md-4" key={p._id} >
                                <BlogCard blog={p}/>
                            </div>
                         )
@@ -48,7 +48,7 @@ const AllBlog = ()=> {
                     )}
                 </div>  
                 <div className="row">
-                    <nav className="col-md-4 offset-md-4 text-center pt-5 p-3 paginali">
+                    <nav className="col-md-4 offset-md-5 text-center pt-5 p-3 paginali">
                       <Pagination current={page}
                         total={(productsCount / 3) * 10}
                         onChange={(value) => setPage(value)}/> 

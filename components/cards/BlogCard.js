@@ -1,8 +1,7 @@
 import React from 'react'
 import {Card} from 'antd'
-import {EyeOutlined} from '@ant-design/icons'
 import Router from 'next/router';
-import { Button } from 'antd';
+
 
 const {Meta} =Card
 const BlogCard =({blog})=>{
