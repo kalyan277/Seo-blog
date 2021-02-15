@@ -14,6 +14,39 @@ MongoDb Atlas is used for database.The default backend server is overriden with 
 
 CSS And Bootstrap is used for styling.
 
+
+The Thing To Look For
+------------
+Email Is Send With The Help Of Node Mailer.I Have Used oauth 2.0 for authentication with oauthplayground.
+
+Disqus Commenting System Which Give A Interactive Interface For Commenting.
+
+Redux Form Validation Is Used For Client Side Validation.
+
+Used The Redux Hook In Most Efficient Manner.
+
+formidable package is used for Capturing the form data (Backend).
+
+axios package is used for Network Call (Client Side).
+
+googleapis package is used for Generating the token for outh validation.
+  
+jsonwebtoken package page is used for Generating validation token from server side so that it could be used in client side for user authentication.
+
+moment package is used for changing the time format.
+
+nprogress package is used for show a loding effect from one page to another.
+  
+react-quill package is used for creating blog in client side.It Is Very Efficient.
+ 
+Gave Stress In Code Reusability and redability.
+
+Tried To Keep The UI As Simple As Possible.
+
+Deal With The Functional Components.Tried to follow the industrial Standard.
+
+For Make Communication From Client And Server Possible.I Have Used Next JS.It Is Fast.Give Many Feature Out From THe Box.
+
 DEPLOYED LINK
 ------------
 https://seo-blog-kalyan.herokuapp.com/
