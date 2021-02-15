@@ -1,8 +1,7 @@
 import axios from 'axios';
 import cookie from 'js-cookie'
 const axiosInstance = axios.create({
-  baseURL: `${process.env.API}`,
-  timeout:9000
+  baseURL: `${process.env.API}`
 });
 
 

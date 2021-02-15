@@ -7,6 +7,10 @@ const axiosInstance = axios.create({
   timeout:12000
 });
 
+const axiosInstanceBlog = axios.create({
+  baseURL: `${process.env.API}`
+});
+
 
 const setAuthHeader = () => {
 let token='';
@@ -30,7 +34,7 @@ export const createBlog = async(category)=>{
   url = "api/user/blog";
  }
      
-  return  await axiosInstance
+  return  await axiosInstanceBlog
     .post(url, category,setAuthHeader())
     .then((response) => response.data);
    
@@ -124,7 +128,7 @@ if(isAuth() && isAuth().role ===1){
  }else if(isAuth() && isAuth().role ==0){
   url = `api/user/blog/${slug}`;
  }
-  return  await axiosInstance
+  return  await axiosInstanceBlog
     .put(url,blog,setAuthHeader())
     .then((response) => response.data);
    
