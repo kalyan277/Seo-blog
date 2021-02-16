@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import React,{ useReducer } from 'react';
 import Layout from '../../../components/Layout';
 import { resetPassword } from '../../../actions/auth';
 import { withRouter } from 'next/router';
