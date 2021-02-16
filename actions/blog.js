@@ -65,11 +65,11 @@ export const removeCategory = async(slug)=>{
    
 }
 
-export const listBlogsWithCategoriesAndTags = async()=>{
+export const listBlogsWithCategoriesAndTags = async(skip, limit)=>{
   //console.log(category);
      const url = "api/blogs-categories-tags";
   return  await axiosInstance
-    .post(url,setAuthHeader())
+    .post(url,{skip,limit},setAuthHeader())
     .then((response) => response.data);
    
 }

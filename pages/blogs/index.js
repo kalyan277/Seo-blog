@@ -13,31 +13,32 @@ const Blogs = props => {
       <title>Kalyan blogs | {process.env.APP_NAME}</title>
       <meta
         name="description"
-        content="Programming blogs and tutorials on react node next vue php laravel and web developemnt"
+        content="Latest Blog of Every Type Which Covers Almost Every Sphere"
       />
       <link rel="canonical" href={`${process.env.DOMAIN}${router.pathname}`} />
 
       {/* below is for facebook link share data show */}
       <meta
         property="og:title"
-        content={`Latest web development tutorials | ${process.env.APP_NAME}`}
+        content={`Latest Blog of Every Type Which Covers Almost Every Sphere | ${process.env.APP_NAME}`}
       />
       <meta
         property="og:description"
-        content="Programming blogs and tutorials on react node next vue php laravel and web developemnt"
+        content="Blogs Which Covers Ever Type Which Covers Almost Every Sphere"
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${process.env.DOMAIN}${router.pathname}`} />
       <meta property="og:site_name" content={`${process.env.APP_NAME}`} />
       <meta
         property="og:image"
-        content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+        content={`${process.env.DOMAIN}static/images/favicon.ico`}
       />
+        <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
       <meta
         property="og:image:secure_url"
-        content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+        content={`${process.env.DOMAIN}static/images/favicon.ico`}
       />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:type" content="image/ico" />
       <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
     </Head>
   );
@@ -150,7 +151,8 @@ const Blogs = props => {
 //serverside render
 Blogs.getInitialProps = () => {
   let skip = 0;
-  let limit = 2;
+  let limit = 4;
+
   return listBlogsWithCategoriesAndTags(skip, limit).then(res => {
     if (res.error) {
       console.log(res.error);

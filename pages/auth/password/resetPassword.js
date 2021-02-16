@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 import Layout from '../../../components/Layout';
 import { resetPassword } from '../../../actions/auth';
 import { withRouter } from 'next/router';
+import Head from 'next/head';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -86,8 +87,35 @@ const ResetPassword = props => {
   const showMessage = () => {
     return message && <div className="alert alert-success">{message}</div>;
   };
+  const head = () => {
+    return (
+      <Head>
+        <title>
+          {`Reset Password`} | {process.env.APP_NAME}
+        </title>
+        {/* below is for facebook link share data show */}
+      
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${process.env.DOMAIN}/Reset Password`} />
+        <meta property="og:site_name" content={`${process.env.APP_NAME}`} />
+        <meta
+          property="og:image"
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
+        />
+        <meta
+          property="og:image:secure_url"
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
+        />
+         <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
+        <meta property="og:image:type" content="image/ico" />
+        <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
+      </Head>
+    );
+  };
 
   return (
+    <React.Fragment>
+      {head()}
     <Layout>
       <div className="container text-center">
         <h2>Reset password</h2>
@@ -97,6 +125,7 @@ const ResetPassword = props => {
         {resetPasswordForm()}
       </div>
     </Layout>
+    </React.Fragment>
   );
 };
 

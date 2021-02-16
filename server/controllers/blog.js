@@ -138,7 +138,9 @@ exports.remove =(req,res)=>{
 }
 
 exports.listAllBlogsCategoriesTags =(req,res)=>{
-    let limit =req.body.limit ? parseInt(req.body.limit) : 10
+  //  console.log(req.body.limit);
+   // console.log(req.body.limit);
+    let limit =req.body.limit ? parseInt(req.body.limit) : 4
     let skip = parseInt(req.body.skip) ? parseInt(req.body.skip):0
     let blogs
     let categories

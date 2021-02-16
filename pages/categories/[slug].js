@@ -14,30 +14,31 @@ const Category = props => {
         </title>
         <meta
           name="description"
-          content={`Best programming tutorials on ${category.name}`}
+          content={`Best Blogs on ${category.name}`}
         />
         <link rel="canonical" href={`${process.env.DOMAIN}/categories/${query.slug}`} />
         {/* below is for facebook link share data show */}
         <meta property="og:title" content={`${category.name} | ${process.env.APP_NAME}`} />
         <meta
           property="og:description"
-          content={`Best programming tutorials on ${category.name}`}
+          content={`Best Blogs on ${category.name}`}
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content={`${process.env.DOMAIN}/categories/${query.slug}`}
         />
+         <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
         <meta property="og:site_name" content={`${process.env.APP_NAME}`} />
         <meta
           property="og:image"
-          content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
         />
         <meta
           property="og:image:secure_url"
-          content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
         />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="image/ico" />
         <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
       </Head>
     );

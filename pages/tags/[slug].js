@@ -15,27 +15,28 @@ const Tag = props => {
         </title>
         <meta
           name="description"
-          content={`Best programming tutorials on ${tag.name}`}
+          content={`Best Blogs on ${tag.name}`}
         />
         <link rel="canonical" href={`${process.env.DOMAIN}/tags/${query.slug}`} />
         {/* below is for facebook link share data show */}
         <meta property="og:title" content={`${tag.name} | ${process.env.APP_NAME}`} />
         <meta
           property="og:description"
-          content={`Best programming tutorials on ${tag.name}`}
+          content={`Best Blogs on ${tag.name}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${process.env.DOMAIN}/tags/${query.slug}`} />
         <meta property="og:site_name" content={`${process.env.APP_NAME}`} />
         <meta
           property="og:image"
-          content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
         />
         <meta
           property="og:image:secure_url"
-          content={`${process.env.DOMAIN}/static/images/seo-blog.png`}
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
         />
-        <meta property="og:image:type" content="image/png" />
+         <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
+        <meta property="og:image:type" content="image/ico" />
         <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
       </Head>
     );

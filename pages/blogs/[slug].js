@@ -46,7 +46,8 @@ const SingleBlog = props => {
         property="og:image:secure_url"
         content={`${process.env.API}/blog/photo/${blog.slug}`}
       />
-      <meta property="og:image:type" content="image/jpg" />
+      <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
+      <meta property="og:image:type" content="image/ico" />
       <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
     </Head>
   );

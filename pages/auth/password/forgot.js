@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import Layout from '../../../components/Layout';
 import { forgotPassword } from '../../../actions/auth';
+import Head from 'next/head';
 
 const ForgotPassword = () => {
   const [values, setValues] = useState({
@@ -68,7 +69,35 @@ const ForgotPassword = () => {
     );
   };
 
+    const head = () => {
+    return (
+      <Head>
+        <title>
+          {`Forgot Password`} | {process.env.APP_NAME}
+        </title>
+        {/* below is for facebook link share data show */}
+      
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${process.env.DOMAIN}/Forgot Password`} />
+        <meta property="og:site_name" content={`${process.env.APP_NAME}`} />
+        <meta
+          property="og:image"
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
+        />
+        <meta
+          property="og:image:secure_url"
+          content={`${process.env.DOMAIN}static/images/favicon.ico`}
+        />
+         <link rel="icon" type="image/ico" href="/static/images/favicon.ico" />
+        <meta property="og:image:type" content="image/ico" />
+        <meta property="fb:app_id" content={`${process.env.FB_APP_ID}`} />
+      </Head>
+    );
+  };
+
   return (
+  <React.Fragment>
+         {head()}
     <Layout>
       <div className="container text-center">
         <h2>Forgot password</h2>
@@ -78,6 +107,7 @@ const ForgotPassword = () => {
         {passwordForgotForm()}
       </div>
     </Layout>
+ </React.Fragment>
   );
 };
 
