@@ -8,6 +8,10 @@ Admin has the responsibility to add new Tags and Categories and Deleted user fro
 
 Bootstrap and AntDesign is used for styling.
 
+For FrontEnd It's react and Backend It's Express.
+
+Database That i used is Mongodb Atlas
+
 
 The Thing To Look For
 ------------
