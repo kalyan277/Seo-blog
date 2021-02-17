@@ -119,7 +119,7 @@ const SingleBlog = props => {
                   <p className="lead mt-3 mark">
                     Written by{' '}
                     <Link href={`/profile/${blog.postedBy.username}`}>
-                      <a>{blog.postedBy.username}</a>
+                      <a>{blog.postedBy.name}</a>
                     </Link>{' '}
                     | Published {moment(blog.updatedAt).fromNow()}
                   </p>
