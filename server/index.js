@@ -16,6 +16,7 @@ const categoryRoutes = require('./routes/category')
 const tagRoutes = require('./routes/tag')
 const formRoutes = require('./routes/form')
 const compression =require('compression');
+const cors = require('cors');
 
 
 
@@ -25,7 +26,7 @@ mongoose.connect(process.env.DATABASE,{useNewUrlParser:true,useCreateIndex:true,
 
 app.prepare().then(() => {
   const server = express();
-  
+  server.use(cors());
   server.use(compression());
   server.use(bodyParser.json());
     //MiddleWares
