@@ -1,51 +1,44 @@
 INTRODUCTION
 ------------
-Seo Blog is a Monolithic Functional Based Application,build with the help of Javascript(Next js).
+Seo Blog is a Monolithic Functional Based Application,build with the help of Next js(mongoDb,express and react js).
 
-It Comprises of A Multiuser Login System ,where a user can get register and update basic information(profile).They can upload view update delete their blog.They can also comment and view others blog.Admin User is responsible to add new Tags and Categories and deleted user from the system.  
+It Comprises of A Multiuser Login System ,where a user can get register and update basic information(profile).They can post view update and delete their blog.They can also comment and view others blog.
 
-Disqus commenting system Is Implemented to keep track of Comments.
+Admin has the responsibility to add new Tags and Categories and Deleted user from the system.Basically manage the application.  
 
-Redux hook is used to manage the state.
-
-Node Mailer is used for sending Emails.
-
-MongoDb Atlas is used for database.The default backend server is overriden with express server.
-
-CSS And Bootstrap is used for styling.
+Bootstrap and AntDesign is used for styling.
 
 
 The Thing To Look For
 ------------
-Email Is Send With The Help Of Node Mailer.I Have Used oauth 2.0 for authentication with oauthplayground.
+Email Is Send With The Help Of Node Mailer.I Have Used oauth 2.0 for authentication.it is achieve with the help of oauthplayground.Once The Authentication is done,A token is generated it is used with googleapis for futher validation.After all steps A mail is Sent to the recipient.
 
-Disqus Commenting System Which Give A Interactive Interface For Commenting.
+Disqus Commenting System is to keep track of the comments.It is really interactive and has a pretty good interface for commenting.
 
-Redux Form Validation Is Used For Client Side Validation.
+Redux Form Validation is used for client side validation.One Of the Example is in Signin Page.
 
-Used The Redux Hook In Most Efficient Manner.
+Tried To Used The Redux Hook In Most Efficient Fashion.
 
-formidable package is used for Capturing the form data (Backend).
+Formidable package is used for Capturing the Complex form data in the backend,submitted from frontend.
 
-axios package is used for Network Call (Client Side).
+Axios package is used for Making Network Calls (Client Side).
 
-googleapis package is used for Generating the token for outh validation.
+Googleapis package is used for Generating the token for outh validation.
   
-jsonwebtoken package page is used for Generating validation token from server side so that it could be used in client side for user authentication.
+Jsonwebtoken package is used for Generating validation token from server side so that it could be used in client side for user authentication.
 
-moment package is used for changing the time format.
+Moment package is used for changing the time format.
 
-nprogress package is used for show a loding effect from one page to another.
+Nprogress package is used for show a loding effect switching from one page to another.
   
-react-quill package is used for creating blog in client side.It Is Very Efficient.
+React-quill package is used for creating blog in client side.It Is Very Efficient.
  
-Gave Stress In Code Reusability and redability.
+Deal With The Functional Components.
 
 Tried To Keep The UI As Simple As Possible.
 
-Deal With The Functional Components.Tried to follow the industrial Standard.
+Gave Stress In Code Reusability and redability.
 
-For Make Communication From Client And Server Possible.I Have Used Next JS.It Is Fast.Give Many Feature Out From THe Box.
 
 DEPLOYED LINK
 ------------
