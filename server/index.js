@@ -16,7 +16,7 @@ const categoryRoutes = require('./routes/category')
 const tagRoutes = require('./routes/tag')
 const formRoutes = require('./routes/form')
 const compression =require('compression');
-const cors = require('cors');
+
 
 
 //db
@@ -30,8 +30,6 @@ app.prepare().then(() => {
   server.use(bodyParser.json());
     //MiddleWares
     //app.use(morgan('dev'))
-    
-    server.use(cors())
     server.use(cookieParser())
    
 
