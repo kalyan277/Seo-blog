@@ -77,9 +77,11 @@ exports.update =(req,res)=>{
                 })
             }
         }
-
-            user.photo.data=fs.readFileSync(files.photo.path)
-            user.photo.contentType =files.photo.contentType
+            if(files.photo){
+                user.photo.data=fs.readFileSync(files.photo.path)
+                user.photo.contentType =files.photo.contentType
+            }
+          
             user.save((err,result)=>{
                 if(err){
                 return res.status(400).json({
