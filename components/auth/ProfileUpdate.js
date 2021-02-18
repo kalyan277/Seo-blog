@@ -126,6 +126,7 @@ const ProfileUpdate = () => {
 
   useEffect(() => {
     getProfile().then(data => {
+      
       if (data.error) {
         dispatch({ type: 'error', payload: data.error });
       } else {
