@@ -44,6 +44,7 @@ export const update = async(user)=>{
      return  await axiosInstance
     .put(url,user,setAuthHeader())
     .then((response) => response.data)
+   .catch(error=> error.response);
    
 }
 
