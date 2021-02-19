@@ -11,3 +11,6 @@ body {
 .ant-card {
   cursor: pointer;
 }
+.spacing{
+    margin-bottom: 20px;
+}
