@@ -38,14 +38,12 @@ const OldBlog = ()=> {
                     <div className="row">
                           {produts.map((p)=>{
                        return (
-                           <div className="col-md-4" key={p._id} >
+                           <div className="col-md-4 spacing" key={p._id} >
                                <BlogCard blog={p}/>
                            </div>
                         )
                       })}
-                         {produts.length === 0 &&(
-                            <h1 className="blognopost">No Blog Posted ..</h1>
-                        )}
+                      
                  </div>
                     )}
                 </div>  
